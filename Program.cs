@@ -9,8 +9,18 @@
 
 //List<int> MaxNumbersInLists(List<List<int>>) accepts as a parameter a List of Lists of Integers.
 // It returns a new list with each element representing the maximum number found in the corresponding original list. 
-List<int> intList = new List<int> { 1, 2, 3, 4, 7, 9, 2, 4 };
+List<List<int>> intList = new List<List<int>>
+{
+    new List<int> {1, 5, 3 },
+    new List<int> {9, 7, 3, -2},
+    new List<int> {2, 1, 2 }
+};  
 
+for (int i = 0;i < intList.Count; i++)
+{
+    int max = intList[i].Max();
+    Console.WriteLine($"List {i + 1} has a max of {max}");
+}
 //For example, { {1, 5, 3}, { 9, 7, 3, -2}, { 2, 1, 2} } returns
 //{ 5, 9, 2}. Output the results with a message like: “List 1 has a maximum of 5.
 //List 2 has a maximum of 9. List 3 has a maximum of 2.”
