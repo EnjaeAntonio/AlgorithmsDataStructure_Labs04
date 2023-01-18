@@ -9,6 +9,9 @@
 
 //List<int> MaxNumbersInLists(List<List<int>>) accepts as a parameter a List of Lists of Integers.
 // It returns a new list with each element representing the maximum number found in the corresponding original list. 
+//For example, { {1, 5, 3}, { 9, 7, 3, -2}, { 2, 1, 2} } returns
+//{ 5, 9, 2}. Output the results with a message like: “List 1 has a maximum of 5.
+//List 2 has a maximum of 9. List 3 has a maximum of 2.”
 List<List<int>> intList = new List<List<int>>
 {
     new List<int> {1, 5, 3 },
@@ -21,9 +24,9 @@ for (int i = 0;i < intList.Count; i++)
     int max = intList[i].Max();
     Console.WriteLine($"List {i + 1} has a max of {max}");
 }
-//For example, { {1, 5, 3}, { 9, 7, 3, -2}, { 2, 1, 2} } returns
-//{ 5, 9, 2}. Output the results with a message like: “List 1 has a maximum of 5.
-//List 2 has a maximum of 9. List 3 has a maximum of 2.”
+
+/* The time complexity of this algorithm is O(n) where n is the total number of
+  elements */
 
 //String HighestGrade(List<List<int>>) accepts a list of number grades among students
 //in different courses (where each list represents a single course), between 0 and 100.
