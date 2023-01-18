@@ -12,7 +12,6 @@
 //For example, { {1, 5, 3}, { 9, 7, 3, -2}, { 2, 1, 2} } returns
 //{ 5, 9, 2}. Output the results with a message like: “List 1 has a maximum of 5.
 //List 2 has a maximum of 9. List 3 has a maximum of 2.”
-using System.Collections.Generic;
 
 List<List<int>> intList = new List<List<int>>
 {
@@ -38,9 +37,9 @@ for (int i = 0;i < intList.Count; i++)
 
 List<List<int>> grades = new List<List<int>>
 {
-    new List<int> { 85,92, 67, 90, 94},
-    new List<int> { 50, 60, 57, 100}, 
-    new List<int> { 99}
+    new List<int> { 85, 92, 67, 90, 94},
+    new List<int> { 50, 60, 57, 100   }, 
+    new List<int> { 99                }
 };
 
 List<int> classIndex = new List<int>();
@@ -59,7 +58,7 @@ string HighestGrade(List<List<int>> grades)
             }
         }
     }
-    return $"The highest grades are {highest} this grade was found in class {string.Join(", ", classIndex)} ";
+    return $"The highest grades is {highest} this grade was found in class {string.Join(", ", classIndex)} ";
 }
 
 Console.WriteLine(HighestGrade(grades));
