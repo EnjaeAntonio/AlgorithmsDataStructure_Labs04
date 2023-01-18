@@ -33,10 +33,13 @@ for (int i = 0;i < intList.Count; i++)
 //String HighestGrade(List<List<int>>) accepts a list of number grades among students
 //in different courses (where each list represents a single course), between 0 and 100.
 //It returns the highest grade among all students in all courses.
+//For example: { { 85,92, 67, 94, 94}, { 50, 60, 57, 95}, { 95} }
+//returns "The highest grade is 95. This grade was found in class(es) {index}".
+
 List<List<int>> grades = new List<List<int>>
 {
     new List<int> { 85,92, 67, 90, 94},
-    new List<int> { 50, 60, 57, 90}, 
+    new List<int> { 50, 60, 57, 100}, 
     new List<int> { 99}
 };
 
@@ -56,13 +59,11 @@ string HighestGrade(List<List<int>> grades)
             }
         }
     }
-    return $"The highest grades are {highest} this grade was found in class {classIndex} ";
+    return $"The highest grades are {highest} this grade was found in class {string.Join(", ", classIndex)} ";
 }
 
 Console.WriteLine(HighestGrade(grades));
 
-//For example: { { 85,92, 67, 94, 94}, { 50, 60, 57, 95}, { 95} }
-//returns "The highest grade is 95. This grade was found in class(es) {index}".
 
 //List<int> OrderByLooping(List<int>) orders a list of integers, from least to greatest,
 //using only basic control statements(ie. if/else, for/while).
