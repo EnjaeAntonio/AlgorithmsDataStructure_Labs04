@@ -90,11 +90,7 @@ List<int> OrderByLooping(List<int> nums)
 }
 
 List<int> sortedOrder = OrderByLooping(order);
-
-foreach(int num in sortedOrder)
-{
-    Console.WriteLine(String.Join(", ", sortedOrder));
-}
+Console.WriteLine(String.Join(", ", sortedOrder));
 
 //Bonus:
 //Once you finish these methods, do some research into bubble sorting. refactor OrderByLooping method to use it
