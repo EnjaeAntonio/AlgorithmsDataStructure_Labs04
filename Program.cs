@@ -70,5 +70,31 @@ Console.WriteLine(HighestGrade(grades));
 //For example, argument {6, -2, 5, 3} returns
 //{ -2, 3, 5, 6}.
 
+List<int> order = new List<int> {6, -2, 5, 3};;
+List<int> OrderByLooping(List<int> nums)
+{
+   
+    for (int i = 0; i < order.Count; i++)
+    {
+        for (int j = i + 1; j < order.Count; j++)
+        {
+            if (order[i] > order[j])
+            {
+                int currNum = order[i];
+                order[i] = order[j];
+                order[j] = currNum;
+            }
+        }
+    }
+    return order;
+}
+
+List<int> sortedOrder = OrderByLooping(order);
+
+foreach(int num in sortedOrder)
+{
+    Console.WriteLine(String.Join(", ", sortedOrder));
+}
+
 //Bonus:
 //Once you finish these methods, do some research into bubble sorting. refactor OrderByLooping method to use it
